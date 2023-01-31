@@ -1,0 +1,57 @@
+$medium-color: #ffc640;
+$input-width: 300px;
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pass-field {
+    width: $input-width;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.indicator {
+    margin-top: 4px;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+
+    .segment {
+        flex: auto;
+        height: 4px;
+        border-radius: 4px;
+        background-color: grey;
+
+        &.weak {
+            background-color: red;
+        }
+    
+        &.medium {
+            background-color: $medium-color;
+        }
+    
+        &.strong {
+            background-color: green;
+        }
+    }
+}
+
+small {
+    visibility: hidden;
+    &.weak {
+        color: red;
+        visibility: visible;
+    }
+    &.medium {
+        color: $medium-color;
+        visibility: visible;
+    }  
+    &.strong {
+        color: green;
+        visibility: visible;
+    }
+}
